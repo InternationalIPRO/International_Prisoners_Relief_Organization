@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>International Prisoners Relief Organization (IPRO)</title>
+    <meta name="description" content="International Prisoners Relief Organization (IPRO) provides crucial support to prisoners, ex-prisoners, and vulnerable groups globally, advocating for prison reform and human rights.">
+    <meta name="keywords" content="prisoners relief, human rights, prison reform, legal assistance, rehabilitation, education, advocacy, global prison reform, IPRO, International Prisoners Relief Organization">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="International Prisoners Relief Organization (IPRO)">
+    <meta property="og:description" content="Supporting prisoners, ex-prisoners, and vulnerable groups through advocacy, legal assistance, and rehabilitation programs globally.">
+    <meta property="og:image" content="images/IPRO LOGO.png">
+    <meta property="og:url" content="https://globalprisonrelief.vercel.app">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="International Prisoners Relief Organization (IPRO)">
+    <meta name="twitter:description" content="Advocating for global prison reform and providing support to prisoners and vulnerable groups.">
+    <meta name="twitter:image" content="images/IPRO LOGO.png">
+    <meta name="twitter:site" content="@IPRO">
+    <link rel="canonical" href="https://globalprisonrelief.vercel.app">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+        }
+
+        header {
+            background: #87CEEB; /* Skyblue color */
+            color: #fff;
+            padding: 20px 0;
+            position: relative;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .logo {
+            width: 150px; /* Adjust as needed */
+            height: auto;
+            display: block;
+        }
+
+        .title-container {
+            flex: 1;
+            text-align: center;
+        }
+
+        .title-container h1 {
+            margin: 0;
+            font-size: 1.8em;
+            color: #fff;
+        }
+
+        .catalogue {
+            display: flex;
+            gap: 20px;
+            position: relative; /* Ensure the dropdown is correctly positioned */
+            margin-top: 10px;
+        }
+
+        .catalogue a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .catalogue a:hover {
+            text-decoration: underline;
+        }
+
+        .contact {
+            display: flex;
+            gap: 15px;
+        }
+
+        .contact a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            background-color: #3498db;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .contact a:hover {
+            background-color: #2980b9;
+        }
+
+        .gallery-dropdown,
+        .news-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .gallery-button,
+        .news-button {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            background-color: #3498db;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .gallery-button:hover,
+        .news-button:hover {
+            background-color: #2980b9;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #2c3e50;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1000;
+            max-height: 300px; /* Adjust as needed */
+            overflow-y: auto; /* Enable scrolling if needed */
+        }
+
+        .dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #3498db;
+        }
+
+        .gallery-dropdown:hover .dropdown-content,
+        .news-dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .hero {
+            position: relative;
+            text-align: center;
+            background: #e74c3c;
+            color: #fff;
+            padding: 60px 0; /* Adjust as needed */
+        }
+
+        .hero-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        section {
+            padding: 40px 0;
+            background: #fff;
+            margin-top: 10px;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            padding: 10px 0;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .catalogue {
+                margin-top: 10px;
+                gap: 10px;
+            }
+
+            .contact {
+                margin-top: 10px;
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background: #3498db;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            display: none; /* Hidden by default */
+            z-index: 1000; /* Ensure it's above other content */
+        }
+
+        .back-to-top:hover {
+            background: #2980b9;
+        }
+
+        /* Back Home Button */
+        .back-home {
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+            background: #3498db;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            z-index: 1000; /* Ensure it's above other content */
+        }
+
+        .back-home:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="images/IPRO LOGO.png" alt="IPRO Logo" class="logo">
+            <div class="header-content">
+                <div class="title-container">
+                    <h1>International Prisoners Relief Organization (IPRO)</h1>
+                </div>
+                <div class="catalogue">
+                    <a href="about us.html">About Us</a>
+                    <a href="services.html">Services</a>
+                    <div class="gallery-dropdown">
+                        <div class="gallery-button">Gallery</div>
+                        <div class="dropdown-content">
+                            <a href="embugk.html">Embu Women Prison</a>
+                            <a href="kiambugk.html">Kiambu Prison</a>
+                            <a href="nyandaruagk.html">Nyandarua Prison</a>
+                            <a href="thikagk.html">Thika Prison</a>
+                            <a href="treeplanting.html">Tree Planting</a>
+                            <a href="ruirugk.html">Ruiru Prison</a>
+                            <a href="rumurutigk.html">Rumuruti Prison</a>
+                            <a href="vihigagk.html">Vihiga Prison</a>
+                            <a href="murangagk.html">Muranga Prison</a>
+                            <a href="kiandutu.html">Kiandutu Orphanage Gallery</a>
+                            <a href="kplc.html">CSR WITH KPLC Gallery</a>
+                            <a href="kenya_prisons.html">CSR WITH KENYA PRISONS Gallery</a>
+                            <a href="thikawater.html">CSR WITH THIKA WATER (THIWASCO) Gallery</a>
+                        </div>
+                    </div>
+                    <div class="news-dropdown">
+                        <div class="news-button">News</div>
+                        <div class="dropdown-content">
+                            <a href="embugk.html">Embu Women Prison</a>
+                            <a href="kiambugk.html">Kiambu Prison</a>
+                            <a href="nyandaruagk.html">Nyandarua Prison</a>
+                            <a href="thikagk.html">Thika Prison</a>
+                            <a href="treeplanting.html">Tree Planting</a>
+                            <a href="ruirugk.html">Ruiru Prison</a>
+                            <a href="rumurutigk.html">Rumuruti Prison</a>
+                            <a href="vihigagk.html">Vihiga Prison</a>
+                            <a href="murangagk.html">Muranga Prison</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact">
+                    <a href="contact.html">Contact Us</a>
+                    <a href="activities.html">Activities</a>
+                    <a href="news.html">News</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="home">
+        <div class="hero">
+            <img src="images/HEROH1.png" alt="Supporting Prisoners" class="hero-image">
+            <div class="hero-text">
+                <h1>Welcome to IPRO</h1>
+                <p>Supporting Prisoners, Ex-prisoners, vulnerable groups and Advocating for Reform</p>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>We provide support and relief to prisoners, ex-prisoners, and vulnerable groups globally, advocating for their rights and welfare.</p>
+        </div>
+    </section>
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Legal Assistance</li>
+                <li>Rehabilitation Programs</li>
+                <li>Education and Empowerment</li>
+                <li>Advocacy and Campaigns</li>
+            </ul>
+        </div>
+    </section>
+    <section id="activities">
+        <div class="container">
+            <h2>Activities</h2>
+            <p>Information about our various activities and events.</p>
+        </div>
+    </section>
+    <section id="news">
+        <div class="container">
+            <h2>News</h2>
+            <p>Latest updates and news related to IPRO and our work.</p>
+        </div>
+    </section>
+    <section id="bulletins">
+        <div class="container">
+            <h2>Bulletins</h2>
+            <p>Our bulletins and reports on important matters.</p>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>For more information, please email us at <a href="mailto:info.world.ipro@gmail.com">info.world.ipro@gmail.com</a> or visit our <a href="https://globalprisonrelief.vercel.app">GitHub page</a>.</p>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 International Prisoners Relief Organization. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        Back to Top
+    </div>
+    
+    <div class="back-home" onclick="window.location.href='index.html'">
+        Back Home
+    </div>
+
+    <script>
+        // Show or hide the "Back to Top" button based on scroll position
+        window.onscroll = function() {
+            var button = document.querySelector('.back-to-top');
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                button.style.display = 'block';
+            } else {
+                button.style.display = 'none';
+            }
+        };  
+    </script>
+</body>
+</html>
